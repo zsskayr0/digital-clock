@@ -1,11 +1,6 @@
 const calc_hour = document.getElementById('hour');
-const gradientColors = [
-  { hour: 0, color: '#2e004f' },    // Madrugada
-  { hour: 5, color: '#FF8E00' },     // Nascer do sol
-  { hour: 7, color: '#8AD4FF' },     // Manhã
-  { hour: 13, color: '#008B9F' },    // Tarde
-  { hour: 17, color: '#000428' },    // Noite
-];
+const calc_minute = document.getElementById('minute');
+const calc_second = document.getElementById('second');
 
 function updateTime() {
   const datetoday = new Date();
@@ -18,44 +13,11 @@ function updateTime() {
   if (se < 10) se = '0' + se;
 
   calc_hour.textContent = hr;
-
-  updateGradient(hr, mn);
+  calc_minute.textContent = mn;
+  calc_second.textContent = se;
 }
 
-function updateGradient(hour, minute) {
-  const body = document.body;
-  const colorIndex = findColorIndex(hour);
-
-  const prevColor = gradientColors[colorIndex].color;
-  const nextColor = gradientColors[colorIndex + 1].color;
-
-  const percentage = calculatePercentage(hour, colorIndex);
-
-  const gradient = `linear-gradient(120deg, ${prevColor} ${percentage}%, ${nextColor} ${percentage}%)`;
-  body.style.background = gradient;
-}
-
-function findColorIndex(hour) {
-  let index = 0;
-
-  for (let i = 0; i < gradientColors.length - 1; i++) {
-    if (hour >= gradientColors[i].hour && hour < gradientColors[i + 1].hour) {
-      index = i;
-      break;
-    }
-  }
-
-  return index;
-}
-
-function calculatePercentage(hour, index) {
-  const startHour = gradientColors[index].hour;
-  const endHour = gradientColors[index + 1].hour;
-  const range = endHour - startHour;
-  const offset = hour - startHour;
-
-  return (offset / range) * 100;
-}
-
-// Iniciar a atualização do gradiente
+// Iniciar a atualização do relógio
+updateTime();
 setInterval(updateTime, 1000);
+
