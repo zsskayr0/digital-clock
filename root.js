@@ -17,7 +17,7 @@ function updateTime() {
   calc_second.textContent = se;
 }
 
-// Iniciar a atualização do relógio
+// Start Clock
 updateTime();
 setInterval(updateTime, 1000);
 
