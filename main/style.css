@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(120deg, #53879fd8, #ff2525da);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 250px;
+    width: 550px;
+    background: transparent;
+    border-radius: 3px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
+}
+
+.clock div {
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(5, 5, 5, 0.9);
+    box-shadow: 5px 5px 115px rgba(0, 0, 0, .7);
+    border-radius: 7px;
+    letter-spacing: 3px;
+}
+
+.clock span {
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.clock span.time {
+    font-size: 10px;
+}
+
+/* Estilos para dispositivos móveis */
+
+@media screen and (max-width: 600px) {
+    body {
+        background: linear-gradient(120deg, #53879fd8, #ff2525da);
+    }
+    
+    .clock {
+      flex-direction: column;
+      width: 50%;
+      height: 50%;
+    }
+    
+    .clock div {
+      margin-bottom: 10px;
+      text-align: center;
+      height: 25%;
+      width: 80%;
+    }
+    
+    .clock span {
+      font-size: 30px;
+    }
+    
+    .clock span.time {
+      font-size: 12px;
+    }
+  }
+
+/* Defina as cores para cada hora do dia */
+.hour-0 {
+  background: linear-gradient(120deg, #000033, #00004d);
+}
+
+.hour-1 {
+  background: linear-gradient(120deg, #00004d, #000066);
+}
+
+.hour-2 {
+  background: linear-gradient(120deg, #000066, #000080);
+}
+
+.hour-3 {
+  background: linear-gradient(120deg, #000080, #000099);
+}
+
+.hour-4 {
+  background: linear-gradient(120deg, #000099, #0000b3);
+}
+
+.hour-5 {
+  background: linear-gradient(120deg, #0000b3, #0000cc);
+}
+
+.hour-6 {
+  background: linear-gradient(120deg, #0066cc, #0099cc);
+}
+
+.hour-7 {
+  background: linear-gradient(120deg, #00b3cc, #00e6cc);
+}
+
+.hour-8 {
+  background: linear-gradient(120deg, #00e6cc, #00ffcc);
+}
+
+.hour-9 {
+  background: linear-gradient(120deg, #33ff99, #66ff99);
+}
+
+.hour-10 {
+  background: linear-gradient(120deg, #66ff99, #99ff99);
+}
+
+.hour-11 {
+  background: linear-gradient(120deg, #99ff99, #ccff99);
+}
+
+.hour-12 {
+  background: linear-gradient(120deg, #ffff66, #ffff80);
+}
+
+.hour-13 {
+  background: linear-gradient(120deg, #ffff80, #ffff99);
+}
+
+.hour-14 {
+  background: linear-gradient(120deg, #ffff99, #ffffb3);
+}
+
+.hour-15 {
+  background: linear-gradient(120deg, #ffffb3, #ffffcc);
+}
+
+.hour-16 {
+  background: linear-gradient(120deg, #ffffcc, #ffffe6);
+}
+
+.hour-17 {
+  background: linear-gradient(120deg, #e6ccff, #cc99ff);
+}
+
+.hour-18 {
+  background: linear-gradient(120deg, #cc66ff, #b333ff);
+}
+
+.hour-19 {
+  background: linear-gradient(120deg, #9900ff, #8c00ff);
+}
+
+.hour-20 {
+  background: linear-gradient(120deg, #7300e6, #6600cc);
+}
+
+.hour-21 {
+  background: linear-gradient(120deg, #4d00cc, #4000b3);
+}
+
+.hour-22 {
+  background: linear-gradient(120deg, #260099, #190080);
+}
+
+.hour-23 {
+  background: linear-gradient(120deg, #000066, #00004d);
+}
+
+/* Adicione a animação para a transição dos números */
+.clock span {
+  animation: fade 0.5s;
+  transition-timing-function: ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

@@ -16,7 +16,7 @@ You can see the live demo of the Digital Clock on GitHub Pages: [Digital Clock D
 
 ## How to Use
 
-1. Visit the live demo of the Digital Clock on GitHub Pages: [Digital Clock Demo](https://zsskayr0.github.io/digital-clock/)
+1. Visit the live demo of the Digital Clock on GitHub Pages: [Digital Clock Demo](https://zsskayr0.github.io/digital-clock/main/index.html)
 2. The digital clock will be displayed on the screen, showing the current time of your device.
 
 Feel free to explore the source code, make modifications, and adapt it to your needs. If you find any improvements or have suggestions, please open an issue or submit a pull request.

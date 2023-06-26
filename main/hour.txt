@@ -1,0 +1,4 @@
+madrugada (00 até 05) = 00h começa em um tom de azul escuro, e 05h acaba em um tom de azul normal.
+manhã (06 até 11) = 06h começa em um tom de azul, mais claro que 05h, e vai indo até 11h, que acaba em um tom de verde/amarelo.
+tarde (12 até 17) = começa em um tom de amarelo forte, e decai até se tornar um roxo às 17h.
+noite (18 até 23) - começa em um tom de roxo mais forte que o de 17h, e vai se tornando um azul escuro, pra completar o ciclo em 00h.
